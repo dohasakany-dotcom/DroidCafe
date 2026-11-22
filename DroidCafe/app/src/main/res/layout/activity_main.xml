@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Droid Desserts"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageDonut"
+        android:layout_width="136dp"
+        android:layout_height="113dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageIceCream"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTitle"
+        app:layout_constraintVertical_bias="0.365"
+        app:srcCompat="@drawable/donut" />
+
+    <TextView
+        android:id="@+id/textDonut"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/donut"
+        app:layout_constraintBottom_toBottomOf="@+id/imageDonut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageDonut"
+        app:layout_constraintTop_toTopOf="@+id/imageDonut" />
+
+    <ImageView
+        android:id="@+id/imageIceCream"
+        android:layout_width="129dp"
+        android:layout_height="124dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/textIceCream"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageDonut"
+        app:layout_constraintTop_toBottomOf="@+id/imageDonut"
+        app:srcCompat="@drawable/icecream" />
+
+    <TextView
+        android:id="@+id/textIceCream"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:freezesText="false"
+        android:text="@string/ice_cream"
+        app:layout_constraintBottom_toBottomOf="@+id/imageIceCream"
+        app:layout_constraintEnd_toEndOf="@+id/textDonut"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textDonut"
+        app:layout_constraintTop_toTopOf="@+id/imageIceCream" />
+
+    <ImageView
+        android:id="@+id/imageFroyo"
+        android:layout_width="136dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="@+id/imageIceCream"
+        app:layout_constraintTop_toBottomOf="@+id/imageIceCream"
+        app:srcCompat="@drawable/froyo" />
+
+    <TextView
+        android:id="@+id/textForyo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:freezesText="false"
+        android:text="@string/froyo"
+        app:layout_constraintBottom_toBottomOf="@+id/imageFroyo"
+        app:layout_constraintEnd_toEndOf="@+id/textIceCream"
+        app:layout_constraintStart_toEndOf="@+id/imageFroyo"
+        app:layout_constraintTop_toTopOf="@+id/imageFroyo" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_action_cart" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
